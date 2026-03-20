@@ -1,8 +1,5 @@
-# robots.txt for CYGNUS Consulting SAC
-# https://cygnus.com.pe
-
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Allow: /
+Disallow:
 
-# Sitemap location
 Sitemap: https://cygnus.com.pe/sitemap.xml

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OG Image Generator - Cygnus Consulting</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f0f0f0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    /* OG Image Container - 1200x630px */
+    .og-image {
+      width: 1200px;
+      height: 630px;
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #3b82f6 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px;
+    }
+
+    /* Decorative elements */
+    .og-image::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(249, 115, 22, 0.3) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .og-image::after {
+      content: '';
+      position: absolute;
+      bottom: -100px;
+      left: -100px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    /* Grid pattern overlay */
+    .grid-pattern {
+      position: absolute;
+      inset: 0;
+      opacity: 0.05;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
+      background-size: 50px 50px;
+    }
+
+    /* Content */
+    .content {
+      position: relative;
+      z-index: 10;
+      max-width: 700px;
+    }
+
+    /* Logo area */
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .logo-icon {
+      width: 64px;
+      height: 64px;
+      background: white;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    }
+
+    .logo-icon svg {
+      width: 40px;
+      height: 40px;
+      fill: #1e40af;
+    }
+
+    .logo-text {
+      color: white;
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .logo-subtext {
+      color: rgba(255,255,255,0.7);
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* Main headline */
+    .headline {
+      color: white;
+      font-size: 64px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      letter-spacing: -1px;
+    }
+
+    .headline span {
+      color: #f97316;
+    }
+
+    /* Subheadline */
+    .subheadline {
+      color: rgba(255,255,255,0.9);
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 1.4;
+      margin-bottom: 48px;
+    }
+
+    /* Badges/Tags */
+    .badges {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 100px;
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .badge svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Right side decoration */
+    .decoration {
+      position: absolute;
+      right: 80px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 350px;
+      height: 350px;
+      opacity: 0.9;
+    }
+
+    .decoration-circle {
+      position: absolute;
+      border-radius: 50%;
+      border: 3px solid rgba(255,255,255,0.2);
+    }
+
+    .decoration-circle:nth-child(1) {
+      width: 100%;
+      height: 100%;
+      animation: pulse 3s ease-in-out infinite;
+    }
+
+    .decoration-circle:nth-child(2) {
+      width: 70%;
+      height: 70%;
+      top: 15%;
+      left: 15%;
+      animation: pulse 3s ease-in-out infinite 0.5s;
+    }
+
+    .decoration-circle:nth-child(3) {
+      width: 40%;
+      height: 40%;
+      top: 30%;
+      left: 30%;
+      background: rgba(249, 115, 22, 0.3);
+      border: none;
+      animation: pulse 3s ease-in-out infinite 1s;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.05); opacity: 0.8; }
+    }
+
+    /* SAP Partner Badge */
+    .sap-badge {
+      position: absolute;
+      bottom: 60px;
+      right: 80px;
+      background: white;
+      padding: 16px 28px;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .sap-badge-text {
+      color: #1e40af;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .sap-badge-sub {
+      color: #64748b;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    /* Instructions */
+    .instructions {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1e293b;
+      color: white;
+      padding: 16px 24px;
+      border-radius: 12px;
+      font-size: 14px;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    }
+
+    .instructions code {
+      background: #334155;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <!-- OG Image -->
+  <div class="og-image" id="ogImage">
+    <div class="grid-pattern"></div>
+
+    <div class="content">
+      <!-- Logo -->
+      <div class="logo-container">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="logo-text">CYGNUS</div>
+          <div class="logo-subtext">Consulting SAC</div>
+        </div>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="headline">
+        Consultoría<br>
+        <span>SAP Business One</span><br>
+        en Perú
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="subheadline">
+        Partner Oficial SAP con +15 años de experiencia
+      </p>
+
+      <!-- Badges -->
+      <div class="badges">
+        <div class="badge">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          Consultores Certificados
+        </div>
+        <div class="badge">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+          Implementación Rápida
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative circles -->
+    <div class="decoration">
+      <div class="decoration-circle"></div>
+      <div class="decoration-circle"></div>
+      <div class="decoration-circle"></div>
+    </div>
+
+    <!-- SAP Partner Badge -->
+    <div class="sap-badge">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="24" height="24" rx="4" fill="#1e40af"/>
+        <text x="12" y="17" text-anchor="middle" fill="white" font-size="12" font-weight="bold">SAP</text>
+      </svg>
+      <div>
+        <div class="sap-badge-text">Partner Oficial</div>
+        <div class="sap-badge-sub">OpenEcosystem</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Instructions -->
+  <div class="instructions">
+    📸 <strong>Para guardar la imagen:</strong> Usa la herramienta de desarrollo (F12) → Capture screenshot del elemento <code>#ogImage</code> o usa una extensión como "GoFullPage"
+  </div>
+
+  <!-- html-to-image library for automatic generation -->
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script>
+    // Auto-generate and download the image
+    window.onload = function() {
+      const ogImage = document.getElementById('ogImage');
+
+      setTimeout(() => {
+        html2canvas(ogImage, {
+          width: 1200,
+          height: 630,
+          scale: 1,
+          useCORS: true,
+          allowTaint: true,
+          backgroundColor: null
+        }).then(canvas => {
+          // Create download link
+          const link = document.createElement('a');
+          link.download = 'og-image.jpg';
+          link.href = canvas.toDataURL('image/jpeg', 0.95);
+          link.textContent = '⬇️ Descargar imagen OG';
+          link.style.cssText = 'position: fixed; top: 20px; right: 20px; background: #f97316; color: white; padding: 16px 24px; border-radius: 12px; text-decoration: none; font-weight: 600; box-shadow: 0 10px 40px rgba(0,0,0,0.3); z-index: 1000; cursor: pointer;';
+          document.body.appendChild(link);
+        });
+      }, 1000);
+    };
+  </script>
+</body>
+</html>
