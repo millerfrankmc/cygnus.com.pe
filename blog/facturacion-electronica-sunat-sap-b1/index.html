@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Facturación electrónica SUNAT con SAP Business One | Cygnus Consulting</title>
+    <meta name="description" content="Guía práctica para emitir comprobantes electrónicos validados por SUNAT directamente desde SAP Business One: cómo funciona, qué se integra y por qué conviene hacerlo desde el ERP." />
+    <link rel="canonical" href="https://cygnus.com.pe/blog/facturacion-electronica-sunat-sap-b1/" />
+    <link rel="shortcut icon" href="/img/cygnus.ico" type="image/x-icon" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://cygnus.com.pe/blog/facturacion-electronica-sunat-sap-b1/" />
+    <meta property="og:title" content="Facturación electrónica SUNAT con SAP Business One | Cygnus Consulting" />
+    <meta property="og:description" content="Guía práctica para emitir comprobantes electrónicos validados por SUNAT directamente desde SAP Business One: cómo funciona, qué se integra y por qué conviene hacerlo desde el ERP." />
+    <meta property="og:locale" content="es_PE" />
+    <meta property="og:site_name" content="Cygnus Consulting" />
+    <meta property="og:image" content="https://cygnus.com.pe/img/og-cover.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Facturación electrónica SUNAT con SAP Business One | Cygnus Consulting" />
+    <meta name="twitter:description" content="Guía práctica para emitir comprobantes electrónicos validados por SUNAT directamente desde SAP Business One: cómo funciona, qué se integra y por qué conviene hacerlo desde el ERP." />
+    <meta name="twitter:image" content="https://cygnus.com.pe/img/og-cover.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Facturación electrónica SUNAT con SAP Business One","description":"Guía práctica para emitir comprobantes electrónicos validados por SUNAT directamente desde SAP Business One: cómo funciona, qué se integra y por qué conviene hacerlo desde el ERP.","datePublished":"2026-08-19","dateModified":"2026-08-19","inLanguage":"es-PE","image":"https://cygnus.com.pe/img/og-cover.png","author":{"@type":"Organization","name":"Cygnus Consulting SAC","url":"https://cygnus.com.pe"},"publisher":{"@type":"Organization","name":"Cygnus Consulting SAC","url":"https://cygnus.com.pe"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://cygnus.com.pe/blog/facturacion-electronica-sunat-sap-b1/"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://cygnus.com.pe/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://cygnus.com.pe/blog/"},{"@type":"ListItem","position":3,"name":"Facturación electrónica SUNAT con SAP Business One","item":"https://cygnus.com.pe/blog/facturacion-electronica-sunat-sap-b1/"}]}</script>
+    <style>
+:root{--ink:#17171c;--body:#212121;--slate:#75758a;--hairline:#d9d9dd;--blue:#1863dc;--green:#003c33;--stone:#eeece7}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Inter',Arial,ui-sans-serif,system-ui,sans-serif;color:var(--body);background:#fff;line-height:1.75;font-size:16.5px;-webkit-font-smoothing:antialiased}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+.site-header{border-bottom:1px solid var(--hairline)}
+.header-inner{max-width:780px;margin:0 auto;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{font-family:'Inter Tight',Arial,sans-serif;font-weight:700;color:var(--ink);font-size:17px;letter-spacing:-.02em;line-height:1.1}
+.brand small{display:block;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:9px;color:var(--slate);font-weight:500;letter-spacing:.16em;text-transform:uppercase;margin-top:3px}
+.nav a{color:var(--slate);font-size:14px;margin-left:18px;white-space:nowrap}
+.nav a:hover{color:var(--ink)}
+main{max-width:780px;margin:0 auto;padding:52px 20px 64px}
+.kicker{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin:0 0 14px}
+.post-title{font-family:'Inter Tight',Arial,sans-serif;font-size:34px;line-height:1.16;letter-spacing:-.02em;color:var(--ink);margin:0 0 12px}
+.post-meta{color:var(--slate);font-size:13.5px;margin:0 0 12px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 30px}
+.tag{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--green);background:var(--stone);padding:4px 10px;border-radius:4px}
+.post-body h2{font-family:'Inter Tight',Arial,sans-serif;font-size:22px;color:var(--ink);margin:42px 0 12px;padding-top:26px;border-top:1px solid var(--hairline);letter-spacing:-.01em}
+.post-body h3{font-family:'Inter Tight',Arial,sans-serif;font-size:17px;color:var(--ink);margin:28px 0 8px}
+.post-body p{margin:0 0 16px}
+.post-body ul,.post-body ol{margin:0 0 18px;padding-left:22px}
+.post-body li{margin-bottom:8px}
+.post-body table{border-collapse:collapse;width:100%;margin:0 0 20px;font-size:14.5px}
+.post-body th,.post-body td{border:1px solid var(--hairline);padding:9px 11px;text-align:left;vertical-align:top}
+.post-body th{background:var(--stone);font-family:'Inter Tight',Arial,sans-serif;font-weight:600;color:var(--ink)}
+.post-body blockquote{margin:0 0 18px;padding:2px 18px;border-left:3px solid var(--blue);color:var(--slate)}
+.cta-box{background:var(--stone);border:1px solid var(--hairline);border-radius:12px;padding:28px;margin:44px 0 10px;text-align:center}
+.cta-box h2{border:none;padding:0;margin:0 0 8px;font-size:20px;font-family:'Inter Tight',Arial,sans-serif;color:var(--ink)}
+.cta-box p{color:var(--slate);font-size:14.5px;margin:0 0 18px}
+.btn{display:inline-block;background:var(--blue);color:#fff !important;padding:11px 20px;border-radius:8px;font-size:14.5px;font-weight:600;text-decoration:none}
+.btn:hover{text-decoration:none;filter:brightness(.94)}
+.back-link{display:inline-block;margin-top:24px;font-size:14px;color:var(--slate)}
+.post-list{display:grid;gap:14px;margin-top:34px}
+.post-card{border:1px solid var(--hairline);border-radius:12px;padding:22px 24px}
+.post-card h2{margin:0 0 6px;font-family:'Inter Tight',Arial,sans-serif;font-size:19px}
+.post-card h2 a{color:var(--ink)}
+.post-card h2 a:hover{color:var(--blue)}
+.read-more{font-size:14px;font-weight:600}
+footer{border-top:1px solid var(--hairline);padding:28px 20px;text-align:center;color:var(--slate);font-size:13px}
+footer a{color:var(--slate)}
+footer p{margin:4px 0}
+@media (max-width:560px){.post-title{font-size:27px}.header-inner{justify-content:center;text-align:center}.nav a{margin:0 9px}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+</style>
+  </head>
+  <body id="page-top">
+    
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/">Cygnus Consulting<small>SAP Business One · Perú</small></a>
+        <nav class="nav" aria-label="Principal">
+          <a href="/">Inicio</a><a href="/cursos/">Cursos</a><a href="/blog/">Blog</a><a href="/#contacto">Contacto</a>
+        </nav>
+      </div>
+    </header>
+  <main>
+    <article>
+      <p class="kicker">Blog · SAP Business One</p>
+      <h1 class="post-title">Facturación electrónica SUNAT con SAP Business One</h1>
+      <p class="post-meta">19 de agosto de 2026 · 2 min de lectura</p>
+      <div class="tags"><span class="tag">sunat</span><span class="tag">facturación electrónica</span><span class="tag">ose</span><span class="tag">add-ons</span></div>
+      <div class="post-body"><p>La facturación electrónica es hoy una obligación para la gran mayoría de empresas peruanas, y emitir desde una planilla o un sistema contable aislado genera doble digitación, errores de validación y riesgo de reparos ante SUNAT. La alternativa natural es emitir desde <strong>SAP Business One</strong>, donde la venta ya está registrada.</p>
+<h2>¿Cómo funciona la facturación electrónica desde SAP B1?</h2>
+<p>El add-on de <strong>Facturación Electrónica de Cygnus</strong> integra SAP Business One con una <strong>OSE certificada</strong> (Operador de Servicios Electrónicos — Carvajal Tecnología y Servicios S.A.C.), de modo que el flujo es automático:</p>
+<ol>
+<li>El usuario emite la factura, boleta o comprobante en las opciones estándar de SAP Business One.</li>
+<li>El comprobante se envía automáticamente a SUNAT a través de la OSE.</li>
+<li>SUNAT responde con el estado de aceptación y el sistema actualiza el documento en el formulario de ventas.</li>
+<li>El PDF, el CDR y el XML quedan disponibles en la pestaña <strong>Anexos</strong> del documento.</li>
+<li>Se puede enviar el comprobante al correo electrónico del cliente de forma directa.</li>
+</ol>
+<h2>¿Qué beneficios trae emitir desde el ERP?</h2>
+<ul>
+<li><strong>Agiliza el proceso de ventas</strong>: la facturación nace del documento de venta, sin reescribir datos.</li>
+<li><strong>Minimiza tiempos</strong>: generación, validación y envío del documento en un solo flujo.</li>
+<li><strong>Asegura el cumplimiento</strong>: la validación contra SUNAT ocurre en tiempo real, con trazabilidad de cada respuesta.</li>
+<li><strong>Reduce el uso de papel</strong> y los costos de envío físico.</li>
+<li>Es <strong>configurable</strong>: permite agregar campos adicionales al comprobante según el negocio.</li>
+</ul>
+<h2>¿Qué pasa con los demás comprobantes y obligaciones?</h2>
+<p>La facturación electrónica convive con otras obligaciones que Cygnus también automatiza sobre SAP Business One: <strong>detracciones</strong> (con cálculo automático y constancias), <strong>pago masivo</strong> (telecrédito para BCP, BBVA, Scotiabank, Interbank y Banbif), <strong>rendición de gastos</strong> y <strong>gestión de letras</strong> para cobranza y tesorería. Todas operan sobre el mismo ERP, con un único registro contable.</p>
+<h2>¿Por dónde empezar?</h2>
+<p>Cada implementación parte de un diagnóstico del proceso de ventas actual: qué comprobantes emite, qué OSE usa (o si aún no tiene una) y qué campos adicionales necesita. Con ese alcance se define la configuración y el plan de pruebas.</p>
+<blockquote>
+<p>¿Quiere emitir sus comprobantes desde SAP Business One? Hable con un consultor certificado de Cygnus: le respondemos en menos de 24 horas hábiles y le alcanzamos la ficha técnica del add-on.</p>
+</blockquote>
+</div>
+      
+      <aside class="cta-box">
+        <h2>Hable con un consultor certificado</h2>
+        <p>Le respondemos en menos de 24 horas hábiles, con una propuesta clara y sin compromiso.</p>
+        <a class="btn" href="https://wa.me/51981583898?text=Hola%2C%20le%C3%AD%20el%20art%C3%ADculo%20%C2%ABFacturaci%C3%B3n%20electr%C3%B3nica%20SUNAT%20con%20SAP%20Business%20One%C2%BB%20en%20el%20blog%20de%20Cygnus%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n.">Consultar por WhatsApp</a>
+      </aside>
+      <p><a class="back-link" href="/blog/">← Volver al blog</a></p>
+    </article>
+  </main>
+    <footer>
+      <p><a href="/">Cygnus Consulting SAC</a> · <a href="/cursos/">Cursos</a> · <a href="/blog/">Blog</a></p>
+      <p>Consultoría, soporte y desarrollo de SAP Business One en Perú.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>On-Premise vs Nube vs Alquiler: cómo elegir la modalidad de SAP Business One | Cygnus Consulting</title>
+    <meta name="description" content="Comparativa de las tres formas de operar SAP Business One en Perú — licencia propia, hosting administrado o alquiler por cuota mensual — para decidir según presupuesto, control de datos y etapa de crecimiento." />
+    <link rel="canonical" href="https://cygnus.com.pe/blog/on-premise-vs-nube-vs-alquiler-sap-b1/" />
+    <link rel="shortcut icon" href="/img/cygnus.ico" type="image/x-icon" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://cygnus.com.pe/blog/on-premise-vs-nube-vs-alquiler-sap-b1/" />
+    <meta property="og:title" content="On-Premise vs Nube vs Alquiler: cómo elegir la modalidad de SAP Business One | Cygnus Consulting" />
+    <meta property="og:description" content="Comparativa de las tres formas de operar SAP Business One en Perú — licencia propia, hosting administrado o alquiler por cuota mensual — para decidir según presupuesto, control de datos y etapa de crecimiento." />
+    <meta property="og:locale" content="es_PE" />
+    <meta property="og:site_name" content="Cygnus Consulting" />
+    <meta property="og:image" content="https://cygnus.com.pe/img/og-cover.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="On-Premise vs Nube vs Alquiler: cómo elegir la modalidad de SAP Business One | Cygnus Consulting" />
+    <meta name="twitter:description" content="Comparativa de las tres formas de operar SAP Business One en Perú — licencia propia, hosting administrado o alquiler por cuota mensual — para decidir según presupuesto, control de datos y etapa de crecimiento." />
+    <meta name="twitter:image" content="https://cygnus.com.pe/img/og-cover.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"On-Premise vs Nube vs Alquiler: cómo elegir la modalidad de SAP Business One","description":"Comparativa de las tres formas de operar SAP Business One en Perú — licencia propia, hosting administrado o alquiler por cuota mensual — para decidir según presupuesto, control de datos y etapa de crecimiento.","datePublished":"2026-08-19","dateModified":"2026-08-19","inLanguage":"es-PE","image":"https://cygnus.com.pe/img/og-cover.png","author":{"@type":"Organization","name":"Cygnus Consulting SAC","url":"https://cygnus.com.pe"},"publisher":{"@type":"Organization","name":"Cygnus Consulting SAC","url":"https://cygnus.com.pe"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://cygnus.com.pe/blog/on-premise-vs-nube-vs-alquiler-sap-b1/"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://cygnus.com.pe/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://cygnus.com.pe/blog/"},{"@type":"ListItem","position":3,"name":"On-Premise vs Nube vs Alquiler: cómo elegir la modalidad de SAP Business One","item":"https://cygnus.com.pe/blog/on-premise-vs-nube-vs-alquiler-sap-b1/"}]}</script>
+    <style>
+:root{--ink:#17171c;--body:#212121;--slate:#75758a;--hairline:#d9d9dd;--blue:#1863dc;--green:#003c33;--stone:#eeece7}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Inter',Arial,ui-sans-serif,system-ui,sans-serif;color:var(--body);background:#fff;line-height:1.75;font-size:16.5px;-webkit-font-smoothing:antialiased}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+.site-header{border-bottom:1px solid var(--hairline)}
+.header-inner{max-width:780px;margin:0 auto;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{font-family:'Inter Tight',Arial,sans-serif;font-weight:700;color:var(--ink);font-size:17px;letter-spacing:-.02em;line-height:1.1}
+.brand small{display:block;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:9px;color:var(--slate);font-weight:500;letter-spacing:.16em;text-transform:uppercase;margin-top:3px}
+.nav a{color:var(--slate);font-size:14px;margin-left:18px;white-space:nowrap}
+.nav a:hover{color:var(--ink)}
+main{max-width:780px;margin:0 auto;padding:52px 20px 64px}
+.kicker{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin:0 0 14px}
+.post-title{font-family:'Inter Tight',Arial,sans-serif;font-size:34px;line-height:1.16;letter-spacing:-.02em;color:var(--ink);margin:0 0 12px}
+.post-meta{color:var(--slate);font-size:13.5px;margin:0 0 12px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 30px}
+.tag{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--green);background:var(--stone);padding:4px 10px;border-radius:4px}
+.post-body h2{font-family:'Inter Tight',Arial,sans-serif;font-size:22px;color:var(--ink);margin:42px 0 12px;padding-top:26px;border-top:1px solid var(--hairline);letter-spacing:-.01em}
+.post-body h3{font-family:'Inter Tight',Arial,sans-serif;font-size:17px;color:var(--ink);margin:28px 0 8px}
+.post-body p{margin:0 0 16px}
+.post-body ul,.post-body ol{margin:0 0 18px;padding-left:22px}
+.post-body li{margin-bottom:8px}
+.post-body table{border-collapse:collapse;width:100%;margin:0 0 20px;font-size:14.5px}
+.post-body th,.post-body td{border:1px solid var(--hairline);padding:9px 11px;text-align:left;vertical-align:top}
+.post-body th{background:var(--stone);font-family:'Inter Tight',Arial,sans-serif;font-weight:600;color:var(--ink)}
+.post-body blockquote{margin:0 0 18px;padding:2px 18px;border-left:3px solid var(--blue);color:var(--slate)}
+.cta-box{background:var(--stone);border:1px solid var(--hairline);border-radius:12px;padding:28px;margin:44px 0 10px;text-align:center}
+.cta-box h2{border:none;padding:0;margin:0 0 8px;font-size:20px;font-family:'Inter Tight',Arial,sans-serif;color:var(--ink)}
+.cta-box p{color:var(--slate);font-size:14.5px;margin:0 0 18px}
+.btn{display:inline-block;background:var(--blue);color:#fff !important;padding:11px 20px;border-radius:8px;font-size:14.5px;font-weight:600;text-decoration:none}
+.btn:hover{text-decoration:none;filter:brightness(.94)}
+.back-link{display:inline-block;margin-top:24px;font-size:14px;color:var(--slate)}
+.post-list{display:grid;gap:14px;margin-top:34px}
+.post-card{border:1px solid var(--hairline);border-radius:12px;padding:22px 24px}
+.post-card h2{margin:0 0 6px;font-family:'Inter Tight',Arial,sans-serif;font-size:19px}
+.post-card h2 a{color:var(--ink)}
+.post-card h2 a:hover{color:var(--blue)}
+.read-more{font-size:14px;font-weight:600}
+footer{border-top:1px solid var(--hairline);padding:28px 20px;text-align:center;color:var(--slate);font-size:13px}
+footer a{color:var(--slate)}
+footer p{margin:4px 0}
+@media (max-width:560px){.post-title{font-size:27px}.header-inner{justify-content:center;text-align:center}.nav a{margin:0 9px}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+</style>
+  </head>
+  <body id="page-top">
+    
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/">Cygnus Consulting<small>SAP Business One · Perú</small></a>
+        <nav class="nav" aria-label="Principal">
+          <a href="/">Inicio</a><a href="/cursos/">Cursos</a><a href="/blog/">Blog</a><a href="/#contacto">Contacto</a>
+        </nav>
+      </div>
+    </header>
+  <main>
+    <article>
+      <p class="kicker">Blog · SAP Business One</p>
+      <h1 class="post-title">On-Premise vs Nube vs Alquiler: cómo elegir la modalidad de SAP Business One</h1>
+      <p class="post-meta">19 de agosto de 2026 · 2 min de lectura</p>
+      <div class="tags"><span class="tag">modalidades</span><span class="tag">nube</span><span class="tag">alquiler</span><span class="tag">on-premise</span><span class="tag">decisiones</span></div>
+      <div class="post-body"><p>SAP Business One es una sola solución, pero se opera de <strong>tres maneras</strong> distintas: con licencia propia en su infraestructura (on-premise), en la nube con hosting administrado, o alquilando las licencias con una cuota mensual. Elegir bien define su estructura de costos y su flexibilidad por años.</p>
+<h2>La comparación en una tabla</h2>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>On-Premise</th>
+<th>Nube · Hosting</th>
+<th>Nube · Alquiler</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Inversión inicial</td>
+<td>Licencia perpetua</td>
+<td>Baja (servicio)</td>
+<td><strong>Ninguna</strong></td>
+</tr>
+<tr>
+<td>Costo</td>
+<td>Mantenimiento anual</td>
+<td>Cuota mensual</td>
+<td><strong>Cuota mensual por usuario, todo incluido</strong></td>
+</tr>
+<tr>
+<td>Datos</td>
+<td>100% en su infraestructura</td>
+<td>Administrados por el partner</td>
+<td>Administrados por el partner</td>
+</tr>
+<tr>
+<td>Hardware</td>
+<td>Necesario (o servidor propio)</td>
+<td>Ninguno</td>
+<td>Ninguno</td>
+</tr>
+<tr>
+<td>Acceso</td>
+<td>Red corporativa / VPN</td>
+<td>Desde cualquier lugar y dispositivo</td>
+<td>Desde cualquier lugar y dispositivo</td>
+</tr>
+<tr>
+<td>Escalabilidad</td>
+<td>Comprar más licencias</td>
+<td>Escala el servicio</td>
+<td><strong>Escala o reduce licencias al ritmo del negocio</strong></td>
+</tr>
+<tr>
+<td>Control de TI</td>
+<td>Total</td>
+<td>Delegado</td>
+<td>Delegado</td>
+</tr>
+</tbody></table>
+<h2>¿Cuándo conviene cada una?</h2>
+<p><strong>On-Premise</strong> es para empresas con políticas de TI estrictas, requisitos de control de accesos o datos sensibles que deben permanecer en su infraestructura, y que prefieren capitalizar la inversión en una licencia perpetua.</p>
+<p><strong>Nube · Hosting</strong> es para negocios que no quieren administrar servidores pero prefieren pagar por el servicio de infraestructura (respaldos, disponibilidad) sin cambiar el modelo de licencias.</p>
+<p><strong>Nube · Alquiler</strong> es la opción con menor barrera de capital: convierte la inversión en una <strong>cuota mensual predecible</strong>, incluye soporte y mantenimiento, y permite ajustar las licencias a la estacionalidad del negocio. Es especialmente atractiva para pymes en crecimiento que no quieren comprometer caja.</p>
+<h2>Tres errores al decidir</h2>
+<ol>
+<li><strong>Comparar solo el precio del mes</strong>: el costo real incluye hardware, soporte, capacitación y tiempo de tu equipo de TI.</li>
+<li><strong>Elegir por el momento, no por la etapa</strong>: una empresa en expansión que compra licencias fijas puede quedar corta a los 12 meses; el alquiler escala con ella.</li>
+<li><strong>Ignorar la migración</strong>: el cambio entre modalidades (por ejemplo, de on-premise a nube) se planifica; pregunte al partner por el costo y plazo antes de firmar.</li>
+</ol>
+<h2>La decisión en tres preguntas</h2>
+<ul>
+<li>¿Tengo política de TI que exija datos en mi infraestructura? → <strong>On-Premise</strong></li>
+<li>¿Quiero cero mantenimiento de servidores pero mantener el modelo de compra? → <strong>Nube · Hosting</strong></li>
+<li>¿Quiero empezar sin desembolso inicial y pagar por usuario al mes? → <strong>Nube · Alquiler</strong></li>
+</ul>
+<blockquote>
+<p>En Cygnus operamos las tres modalidades. Cuéntenos su situación y le recomendamos el escenario con el mejor costo total, sin compromiso. Solicite su cotización por WhatsApp.</p>
+</blockquote>
+</div>
+      
+      <aside class="cta-box">
+        <h2>Hable con un consultor certificado</h2>
+        <p>Le respondemos en menos de 24 horas hábiles, con una propuesta clara y sin compromiso.</p>
+        <a class="btn" href="https://wa.me/51981583898?text=Hola%2C%20le%C3%AD%20el%20art%C3%ADculo%20%C2%ABOn-Premise%20vs%20Nube%20vs%20Alquiler%3A%20c%C3%B3mo%20elegir%20la%20modalidad%20de%20SAP%20Business%20One%C2%BB%20en%20el%20blog%20de%20Cygnus%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n.">Consultar por WhatsApp</a>
+      </aside>
+      <p><a class="back-link" href="/blog/">← Volver al blog</a></p>
+    </article>
+  </main>
+    <footer>
+      <p><a href="/">Cygnus Consulting SAC</a> · <a href="/cursos/">Cursos</a> · <a href="/blog/">Blog</a></p>
+      <p>Consultoría, soporte y desarrollo de SAP Business One en Perú.</p>
+    </footer>
+  </body>
+</html>
