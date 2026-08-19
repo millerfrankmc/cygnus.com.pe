@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
     <title>Cygnus Consulting</title>
     <script>
       // SPA redirect workaround for GitHub Pages
@@ -17,5 +18,11 @@
       );
     </script>
   </head>
-  <body></body>
+  <body>
+    <!-- Fallback visible solo si el redirect JS no corre (crawlers, JS deshabilitado). -->
+    <p style="font-family: sans-serif; padding: 2rem; color: #212121;">
+      Página no encontrada.
+      <a href="https://cygnus.com.pe/" style="color: #1863dc;">Ir al inicio de Cygnus Consulting</a>.
+    </p>
+  </body>
 </html>
