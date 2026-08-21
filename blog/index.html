@@ -22,13 +22,19 @@
     <link rel="stylesheet" href="/fonts/fonts.css" />
     <link rel="stylesheet" href="/assets/index-D9oqS_l6.css" />
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"Blog de Cygnus Consulting","url":"https://cygnus.com.pe/blog/","description":"Guías y comparativas prácticas de SAP Business One para empresas peruanas."}</script>
-    <!-- Google tag (gtag.js) — mismas mediciones que home/cursos (G-7EX8SJ1HHS) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EX8SJ1HHS"></script>
+    <!-- Google tag (gtag.js) — mismas mediciones que home/cursos (G-7EX8SJ1HHS),
+         diferido a window.load igual que en index.html -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-7EX8SJ1HHS');
+      window.addEventListener('load', function () {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-7EX8SJ1HHS';
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function(){dataLayer.push(arguments);};
+        gtag('js', new Date());
+        gtag('config', 'G-7EX8SJ1HHS');
+      });
     </script>
   </head>
   <body id="page-top">

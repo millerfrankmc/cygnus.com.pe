@@ -24,13 +24,19 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Facturación electrónica SUNAT con SAP Business One","description":"Guía para emitir comprobantes electrónicos validados por SUNAT desde SAP Business One: cómo funciona la integración y por qué conviene emitir desde el ERP.","datePublished":"2026-08-19","dateModified":"2026-08-19","inLanguage":"es-PE","image":"https://cygnus.com.pe/img/og-cover.png","author":{"@type":"Organization","name":"Cygnus Consulting SAC","url":"https://cygnus.com.pe"},"publisher":{"@type":"Organization","name":"Cygnus Consulting SAC","url":"https://cygnus.com.pe"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://cygnus.com.pe/blog/facturacion-electronica-sunat-sap-b1/"}}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://cygnus.com.pe/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://cygnus.com.pe/blog/"},{"@type":"ListItem","position":3,"name":"Facturación electrónica SUNAT con SAP Business One","item":"https://cygnus.com.pe/blog/facturacion-electronica-sunat-sap-b1/"}]}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cómo funciona la facturación electrónica desde SAP B1?","acceptedAnswer":{"@type":"Answer","text":"El add-on de Facturación Electrónica de Cygnus integra SAP Business One con una OSE certificada (Operador de Servicios Electrónicos — Carvajal Tecnología y Servicios S.A.C.), de modo que el flujo es automático:"}},{"@type":"Question","name":"¿Qué beneficios trae emitir desde el ERP?","acceptedAnswer":{"@type":"Answer","text":"Agiliza el proceso de ventas : la facturación nace del documento de venta, sin reescribir datos. Minimiza tiempos : generación, validación y envío del documento en un solo flujo. Asegura el cumplimiento : la validación contra SUNAT ocurre en tiempo real, con trazabilidad de cada respuesta. Reduce el uso de papel y los costos de envío físico. Es configurable : permite agregar campos adicionales al comprobante según el negocio."}},{"@type":"Question","name":"¿Qué pasa con los demás comprobantes y obligaciones?","acceptedAnswer":{"@type":"Answer","text":"La facturación electrónica convive con otras obligaciones que Cygnus también automatiza sobre SAP Business One: detracciones (con cálculo automático y constancias), pago masivo (telecrédito para BCP, BBVA, Scotiabank, Interbank y Banbif), rendición de gastos y gestión de letras para cobranza y tesorería. Todas operan sobre el mismo ERP, con un único registro contable."}},{"@type":"Question","name":"¿Por dónde empezar?","acceptedAnswer":{"@type":"Answer","text":"Cada implementación parte de un diagnóstico del proceso de ventas actual: qué comprobantes emite, qué OSE usa (o si aún no tiene una) y qué campos adicionales necesita. Con ese alcance se define la configuración y el plan de pruebas."}}]}</script>
-    <!-- Google tag (gtag.js) — mismas mediciones que home/cursos (G-7EX8SJ1HHS) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EX8SJ1HHS"></script>
+    <!-- Google tag (gtag.js) — mismas mediciones que home/cursos (G-7EX8SJ1HHS),
+         diferido a window.load igual que en index.html -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-7EX8SJ1HHS');
+      window.addEventListener('load', function () {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-7EX8SJ1HHS';
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function(){dataLayer.push(arguments);};
+        gtag('js', new Date());
+        gtag('config', 'G-7EX8SJ1HHS');
+      });
     </script>
   </head>
   <body id="page-top">
