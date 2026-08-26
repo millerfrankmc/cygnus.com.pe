@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Detracciones SUNAT: guía práctica | Cygnus Consulting</title>
+    <meta name="description" content="Qué son las detracciones (SPOT), cómo funcionan y cómo automatizar su cálculo y pago desde SAP Business One con el módulo de Cygnus." />
+    <link rel="canonical" href="https://cygnus.com.pe/blog/detracciones-sunat-guia-practica/" />
+    <link rel="shortcut icon" href="/img/cygnus.ico" type="image/x-icon" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://cygnus.com.pe/blog/detracciones-sunat-guia-practica/" />
+    <meta property="og:title" content="Detracciones SUNAT: guía práctica | Cygnus Consulting" />
+    <meta property="og:description" content="Qué son las detracciones (SPOT), cómo funcionan y cómo automatizar su cálculo y pago desde SAP Business One con el módulo de Cygnus." />
+    <meta property="og:locale" content="es_PE" />
+    <meta property="og:site_name" content="Cygnus Consulting" />
+    <meta property="og:image" content="https://cygnus.com.pe/img/og-cover.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Detracciones SUNAT: guía práctica | Cygnus Consulting" />
+    <meta name="twitter:description" content="Qué son las detracciones (SPOT), cómo funcionan y cómo automatizar su cálculo y pago desde SAP Business One con el módulo de Cygnus." />
+    <meta name="twitter:image" content="https://cygnus.com.pe/img/og-cover.png" />
+    <link rel="preload" href="/fonts/inter-tight.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="stylesheet" href="/assets/index-CoMlL2xO.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Detracciones SUNAT: guía práctica para empresas con SAP Business One","description":"Qué son las detracciones (SPOT), cómo funcionan y cómo automatizar su cálculo y pago desde SAP Business One con el módulo de Cygnus.","datePublished":"2026-08-26","dateModified":"2026-08-26","inLanguage":"es-PE","image":"https://cygnus.com.pe/img/og-cover.png","author":{"@type":"Organization","name":"Cygnus Consulting SAC","url":"https://cygnus.com.pe"},"publisher":{"@type":"Organization","name":"Cygnus Consulting SAC","url":"https://cygnus.com.pe"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://cygnus.com.pe/blog/detracciones-sunat-guia-practica/"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://cygnus.com.pe/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://cygnus.com.pe/blog/"},{"@type":"ListItem","position":3,"name":"Detracciones SUNAT: guía práctica para empresas con SAP Business One","item":"https://cygnus.com.pe/blog/detracciones-sunat-guia-practica/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué son las detracciones?","acceptedAnswer":{"@type":"Answer","text":"Las detracciones son un mecanismo administrativo de recaudación tributaria (SPOT) mediante el cual el comprador descuenta un porcentaje del pago al proveedor y lo deposita en la cuenta del Banco de la Nación del propio proveedor. Ese monto queda &quot;detraído&quot; y solo puede usarse para el pago de obligaciones tributarias."}},{"@type":"Question","name":"¿Cómo se paga una detracción?","acceptedAnswer":{"@type":"Answer","text":"El procedimiento general es:"}},{"@type":"Question","name":"¿Cómo se automatizan las detracciones en SAP Business One?","acceptedAnswer":{"@type":"Answer","text":"El módulo de Detracciones de Cygnus automatiza el proceso de pago masivo de detracciones, completamente integrado a SAP Business One:"}},{"@type":"Question","name":"¿Qué beneficios trae automatizar las detracciones?","acceptedAnswer":{"@type":"Answer","text":"Cumplimiento tributario : los depósitos se realizan en los tiempos establecidos, con constancias registradas. Ahorro de tiempo : se elimina el armado manual de archivos y la digitación de depósitos. Control y trazabilidad : historial completo de archivos generados, montos y usuarios. Menos errores : la actualización automática del depósito en las facturas de compras evita diferencias contables."}}]}</script>
+    <!-- Google tag (gtag.js) — mismas mediciones que home/cursos (G-7EX8SJ1HHS),
+         diferido a window.load igual que en index.html -->
+    <script>
+      window.addEventListener('load', function () {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-7EX8SJ1HHS';
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function(){dataLayer.push(arguments);};
+        gtag('js', new Date());
+        gtag('config', 'G-7EX8SJ1HHS');
+      });
+    </script>
+  </head>
+  <body id="page-top">
+    <div class="mrn-page">
+      
+      <header class="mrn-header">
+        <div class="mrn-header__inner">
+          <a href="/" class="mrn-header__brand">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 L14.4 9.6 L22 12 L14.4 14.4 L12 22 L9.6 14.4 L2 12 L9.6 9.6 Z" fill="currentColor" /></svg>
+            <span class="mrn-header__word">Cygnus Consulting</span>
+            <span class="mrn-header__sub">SAP Partner Open Ecosystem</span>
+          </a>
+          <nav class="mrn-header__nav" aria-label="Secciones">
+            <a href="/#servicios" class="mrn-navlink">Servicios</a>
+            <a href="/#addons" class="mrn-navlink">Add-ons</a>
+            <a href="/#contacto" class="mrn-navlink">Contacto</a>
+            <a href="/cursos/" class="mrn-navlink">Cursos</a>
+            <span class="mrn-navlink" aria-current="page">Blog</span>
+          </nav>
+          <div class="mrn-header__actions">
+            <a href="https://wa.me/51981583898" target="_blank" rel="noopener noreferrer" class="mrn-btn mrn-btn--primary mrn-btn--sm">
+              Diagnóstico gratuito
+            </a>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="mrn-section" aria-label="Artículo">
+          <div class="mrn-section__head mrn-blog-head">
+            <span class="mrn-mono mrn-section__tag">Blog · SAP Business One</span>
+            <h1 class="mrn-section__title">Detracciones SUNAT: guía práctica para empresas con SAP Business One</h1>
+            <p class="mrn-section__intro">26 de agosto de 2026 · 3 min de lectura</p>
+            <div class="mrn-blog-tags"><span class="mrn-pill mrn-pill--coral">sunat</span><span class="mrn-pill mrn-pill--coral">detracciones</span><span class="mrn-pill mrn-pill--coral">pagos</span><span class="mrn-pill mrn-pill--coral">add-ons</span></div>
+          </div>
+          <article class="mrn-article"><p>Las detracciones (sistema SPOT) son una obligación tributaria que muchas empresas peruanas deben cumplir al comprar ciertos bienes o contratar determinados servicios. Gestionarlas manualmente genera riesgo de reparos, retrasos en los pagos y trabajo operativo innecesario. Esta guía explica qué son y cómo automatizarlas desde <strong>SAP Business One</strong>.</p>
+<h2>¿Qué son las detracciones?</h2>
+<p>Las detracciones son un mecanismo administrativo de recaudación tributaria (SPOT) mediante el cual el <strong>comprador descuenta un porcentaje del pago</strong> al proveedor y lo <strong>deposita en la cuenta del Banco de la Nación</strong> del propio proveedor. Ese monto queda &quot;detraído&quot; y solo puede usarse para el pago de obligaciones tributarias.</p>
+<p>Aplican sobre una lista de bienes y servicios definida por SUNAT (entre ellos, algunos servicios como transporte de carga, construcción, intermediación laboral, y ciertos bienes como minerales o recursos hidrobiológicos). El porcentaje de la detracción depende del bien o servicio — SUNAT publica y actualiza la tabla oficial — por lo que conviene que el sistema lo calcule automáticamente y no de forma manual.</p>
+<h2>¿Cómo se paga una detracción?</h2>
+<p>El procedimiento general es:</p>
+<ol>
+<li>El comprador identifica que la operación está sujeta a detracción.</li>
+<li>Calcula el monto según el porcentaje vigente sobre el importe de la operación.</li>
+<li>Realiza el <strong>depósito en la cuenta de detracciones del proveedor</strong> en el Banco de la Nación, dentro del plazo establecido.</li>
+<li>Obtiene la <strong>constancia de depósito</strong> (hoy digital) y la registra en el comprobante de compra para sustentar el gasto.</li>
+</ol>
+<p>Cumplir los plazos es clave: un depósito fuera de tiempo genera intereses y puede acarrear infracciones. Por eso la automatización del proceso reduce el riesgo de incumplimiento.</p>
+<h2>¿Cómo se automatizan las detracciones en SAP Business One?</h2>
+<p>El <strong>módulo de Detracciones de Cygnus</strong> automatiza el proceso de pago masivo de detracciones, completamente integrado a SAP Business One:</p>
+<ul>
+<li><strong>Visualiza y selecciona</strong> los documentos pendientes de detracción en simples pasos.</li>
+<li><strong>Genera el archivo de detracciones</strong> según el formato indicado por SUNAT para realizar el pago masivo.</li>
+<li><strong>Mantiene un historial</strong> de archivos generados, con la información de la detracción y el usuario que la generó.</li>
+<li><strong>Importa la información del depósito</strong> y actualiza automáticamente los datos en las facturas de compras.</li>
+<li><strong>Gestiona los gastos bancarios</strong> en los que incurre el pago de las detracciones.</li>
+</ul>
+<p>El resultado: pago masivo en corto tiempo, cumplimiento de los plazos establecidos, visibilidad y control de cada archivo generado, y las facturas de proveedores actualizadas para sustentar la operación ante SUNAT.</p>
+<h2>¿Qué beneficios trae automatizar las detracciones?</h2>
+<ul>
+<li><strong>Cumplimiento tributario</strong>: los depósitos se realizan en los tiempos establecidos, con constancias registradas.</li>
+<li><strong>Ahorro de tiempo</strong>: se elimina el armado manual de archivos y la digitación de depósitos.</li>
+<li><strong>Control y trazabilidad</strong>: historial completo de archivos generados, montos y usuarios.</li>
+<li><strong>Menos errores</strong>: la actualización automática del depósito en las facturas de compras evita diferencias contables.</li>
+</ul>
+<blockquote>
+<p>¿Quiere automatizar las detracciones de su empresa en SAP Business One? Hable con un consultor certificado de Cygnus: le respondemos en menos de 24 horas hábiles y le alcanzamos la ficha técnica del add-on.</p>
+</blockquote>
+<h2>Sigue leyendo</h2>
+<ul>
+<li><a href="/blog/facturacion-electronica-sunat-sap-b1/">Facturación electrónica SUNAT con SAP Business One</a></li>
+<li><a href="/blog/cuanto-cuesta-implementar-sap-business-one-peru/">¿Cuánto cuesta implementar SAP Business One? Primero, definamos el alcance</a></li>
+</ul>
+</article>
+          <p class="mrn-blog-back"><a href="/blog/">← Volver al blog</a></p>
+        </section>
+        
+      <section class="mrn-section mrn-section--pale-blue" aria-label="Consultar">
+        <div class="mrn-section__head mrn-cta-center">
+          <h2 class="mrn-section__title" style="font-size:clamp(1.6rem,3vw,2.25rem)">Hable con un consultor certificado</h2>
+          <p class="mrn-section__intro">Le respondemos en menos de 24 horas hábiles, con una propuesta clara y sin compromiso.</p>
+          <p style="margin-top:1.75rem"><a class="mrn-btn mrn-btn--primary" href="https://wa.me/51981583898?text=Hola%2C%20le%C3%AD%20el%20art%C3%ADculo%20%C2%ABDetracciones%20SUNAT%3A%20gu%C3%ADa%20pr%C3%A1ctica%20para%20empresas%20con%20SAP%20Business%20One%C2%BB%20en%20el%20blog%20de%20Cygnus%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a></p>
+        </div>
+      </section>
+      </main>
+      <footer class="mrn-footer">
+        <div class="mrn-footer__legal">
+          <span>© 2026 Cygnus Consulting SAC</span>
+          <a class="mrn-footer__top" href="#page-top">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 7-7 7 7" /><path d="M12 19V5" /></svg>
+            Volver al inicio
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
