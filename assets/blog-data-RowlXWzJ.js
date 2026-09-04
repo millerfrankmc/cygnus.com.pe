@@ -1,8 +1,9 @@
-import{f as l}from"./marked.esm-DtAg_ten.js";const t=e=>e.replace(/<[^>]+>/g," ").replace(/\s+/g," ").trim(),u=e=>{const n=[],o=/<h2[^>]*>([^<]+)<\/h2>\s*<(p|ul|ol)[^>]*>([\s\S]*?)<\/(?:p|ul|ol)>/g;let a=o.exec(e);for(;a!==null;){const s=t(a[1]);if(s.includes("?")){const i=t(a[3]).slice(0,500);i&&n.push({question:s,answer:i})}a=o.exec(e)}return n},d=e=>e.replace(/^["']|["']$/g,""),p=(e,n)=>{const o=n.match(/^---\s*\n([\s\S]*?)\n---\s*\n?/),a={};if(o)for(const r of o[1].split(`
-`)){const c=r.indexOf(":");c>0&&(a[r.slice(0,c).trim()]=d(r.slice(c+1).trim()))}const s=o?n.slice(o[0].length):n,i=l.parse(s);return{slug:a.slug??e,title:a.title??e,metaTitle:a.metaTitle||void 0,date:a.date??"",excerpt:a.excerpt??"",draft:a.draft==="true",tags:(a.tags??"").replace(/[[\]"]/g,"").split(",").map(r=>r.trim()).filter(Boolean),contentHtml:i,wordCount:s.trim().split(/\s+/).length,faq:u(i)}},z=e=>{const[n,o,a]=e.split("-").map(Number);return n&&o&&a?`${a} de ${["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"][o-1]} de ${n}`:e},h=e=>Math.max(1,Math.round(e/200)),m=`---
+import{f as l}from"./marked.esm-DrzVhScH.js";const t=e=>e.replace(/<[^>]+>/g," ").replace(/\s+/g," ").trim(),u=e=>{const n=[],o=/<h2[^>]*>([^<]+)<\/h2>\s*<(p|ul|ol)[^>]*>([\s\S]*?)<\/(?:p|ul|ol)>/g;let a=o.exec(e);for(;a!==null;){const s=t(a[1]);if(s.includes("?")){const i=t(a[3]).slice(0,500);i&&n.push({question:s,answer:i})}a=o.exec(e)}return n},d=e=>e.replace(/^["']|["']$/g,""),p=(e,n)=>{const o=n.match(/^---\s*\n([\s\S]*?)\n---\s*\n?/),a={};if(o)for(const r of o[1].split(`
+`)){const c=r.indexOf(":");c>0&&(a[r.slice(0,c).trim()]=d(r.slice(c+1).trim()))}const s=o?n.slice(o[0].length):n,i=l.parse(s);return{slug:a.slug??e,title:a.title??e,metaTitle:a.metaTitle||void 0,image:a.image||void 0,date:a.date??"",excerpt:a.excerpt??"",draft:a.draft==="true",tags:(a.tags??"").replace(/[[\]"]/g,"").split(",").map(r=>r.trim()).filter(Boolean),contentHtml:i,wordCount:s.trim().split(/\s+/).length,faq:u(i)}},z=e=>{const[n,o,a]=e.split("-").map(Number);return n&&o&&a?`${a} de ${["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"][o-1]} de ${n}`:e},h=e=>Math.max(1,Math.round(e/200)),m=`---
 title: "¿Cuánto cuesta implementar SAP Business One? Primero, definamos el alcance"
 metaTitle: "¿Cuánto cuesta SAP Business One en Perú?"
 date: 2026-08-19
+image: /images/blog/cuanto-cuesta-implementar-sap-business-one-peru.jpg
 excerpt: "El costo de SAP Business One en Perú depende de licencias, alcance, add-ons SUNAT y migración. Aprenda a definir cada factor antes de cotizar."
 tags: [implementación, alcance, licencias, erp]
 ---
@@ -46,6 +47,7 @@ En Cygnus, cada proyecto comienza con un **diagnóstico del alcance**: un consul
 title: "¿Cuánto cuesta una licencia de SAP Business One en Perú? El desglose que nadie explica"
 metaTitle: "¿Cuánto cuesta una licencia de SAP B1 en Perú?"
 date: 2026-08-27
+image: /images/blog/cuanto-cuesta-licencia-sap-business-one-peru.jpg
 excerpt: "El precio de una licencia de SAP Business One en Perú se compone de licencias por usuario, mantenimiento anual, implementación, add-ons SUNAT e infraestructura. Conozca cada bloque antes de cotizar."
 tags: [licencias, costos, mantenimiento, erp]
 ---
@@ -155,6 +157,7 @@ El resultado: pago masivo en corto tiempo, cumplimiento de los plazos establecid
 title: "Facturación electrónica SUNAT con SAP Business One"
 metaTitle: "Facturación electrónica SUNAT con SAP B1"
 date: 2026-08-19
+image: /images/blog/facturacion-electronica-sunat-sap-b1.jpg
 excerpt: "Guía para emitir comprobantes electrónicos validados por SUNAT desde SAP Business One: cómo funciona la integración y por qué conviene emitir desde el ERP."
 tags: [sunat, facturación electrónica, ose, add-ons]
 ---
@@ -197,6 +200,7 @@ Cada implementación parte de un diagnóstico del proceso de ventas actual: qué
 title: "On-Premise vs Nube vs Alquiler: cómo elegir la modalidad de SAP Business One"
 metaTitle: "On-Premise vs Nube vs Alquiler en SAP B1"
 date: 2026-08-19
+image: /images/blog/on-premise-vs-nube-vs-alquiler-sap-b1.jpg
 excerpt: "Tres formas de operar SAP Business One en Perú: licencia propia, hosting administrado o alquiler por cuota mensual, según presupuesto y control de datos."
 tags: [modalidades, nube, alquiler, on-premise, decisiones]
 ---
