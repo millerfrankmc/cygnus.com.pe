@@ -1,4 +1,4 @@
-import{c as g,j as e,H as d,S as m,L as u,J as f}from"./index-Brl7a5Sr.js";import{f as v,B as p}from"./marked.esm-DrzVhScH.js";const b=`---
+import{c as g,j as e,H as d,S as m,L as u,J as f}from"./index-_AP0JbiL.js";import{f as v,B as p}from"./marked.esm-DWJoL4MC.js";const b=`---
 title: "Módulo de Detracciones para SAP Business One"
 metaTitle: "Detracciones SUNAT en SAP Business One"
 date: 2026-08-28

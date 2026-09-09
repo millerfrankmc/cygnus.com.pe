@@ -1,5 +1,5 @@
-import{f as l}from"./marked.esm-DrzVhScH.js";const t=e=>e.replace(/<[^>]+>/g," ").replace(/\s+/g," ").trim(),u=e=>{const n=[],o=/<h2[^>]*>([^<]+)<\/h2>\s*<(p|ul|ol)[^>]*>([\s\S]*?)<\/(?:p|ul|ol)>/g;let a=o.exec(e);for(;a!==null;){const s=t(a[1]);if(s.includes("?")){const i=t(a[3]).slice(0,500);i&&n.push({question:s,answer:i})}a=o.exec(e)}return n},d=e=>e.replace(/^["']|["']$/g,""),p=(e,n)=>{const o=n.match(/^---\s*\n([\s\S]*?)\n---\s*\n?/),a={};if(o)for(const r of o[1].split(`
-`)){const c=r.indexOf(":");c>0&&(a[r.slice(0,c).trim()]=d(r.slice(c+1).trim()))}const s=o?n.slice(o[0].length):n,i=l.parse(s);return{slug:a.slug??e,title:a.title??e,metaTitle:a.metaTitle||void 0,image:a.image||void 0,date:a.date??"",excerpt:a.excerpt??"",draft:a.draft==="true",tags:(a.tags??"").replace(/[[\]"]/g,"").split(",").map(r=>r.trim()).filter(Boolean),contentHtml:i,wordCount:s.trim().split(/\s+/).length,faq:u(i)}},z=e=>{const[n,o,a]=e.split("-").map(Number);return n&&o&&a?`${a} de ${["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"][o-1]} de ${n}`:e},h=e=>Math.max(1,Math.round(e/200)),m=`---
+import{f as l}from"./marked.esm-DWJoL4MC.js";const t=e=>e.replace(/<[^>]+>/g," ").replace(/\s+/g," ").trim(),u=e=>{const n=[],o=/<h2[^>]*>([^<]+)<\/h2>\s*<(p|ul|ol)[^>]*>([\s\S]*?)<\/(?:p|ul|ol)>/g;let a=o.exec(e);for(;a!==null;){const s=t(a[1]);if(s.includes("?")){const i=t(a[3]).slice(0,500);i&&n.push({question:s,answer:i})}a=o.exec(e)}return n},d=e=>e.replace(/^["']|["']$/g,""),p=(e,n)=>{const o=n.match(/^---\s*\n([\s\S]*?)\n---\s*\n?/),a={};if(o)for(const r of o[1].split(`
+`)){const c=r.indexOf(":");c>0&&(a[r.slice(0,c).trim()]=d(r.slice(c+1).trim()))}const s=o?n.slice(o[0].length):n,i=l.parse(s);return{slug:a.slug??e,title:a.title??e,metaTitle:a.metaTitle||void 0,image:a.image||void 0,date:a.date??"",excerpt:a.excerpt??"",draft:a.draft==="true",tags:(a.tags??"").replace(/[[\]"]/g,"").split(",").map(r=>r.trim()).filter(Boolean),contentHtml:i,wordCount:s.trim().split(/\s+/).length,faq:u(i)}},O=e=>{const[n,o,a]=e.split("-").map(Number);return n&&o&&a?`${a} de ${["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"][o-1]} de ${n}`:e},h=e=>Math.max(1,Math.round(e/200)),m=`---
 title: "¿Cuánto cuesta implementar SAP Business One? Primero, definamos el alcance"
 metaTitle: "¿Cuánto cuesta SAP Business One en Perú?"
 date: 2026-08-19
@@ -196,6 +196,71 @@ Cada implementación parte de un diagnóstico del proceso de ventas actual: qué
 
 - [¿Cuánto cuesta implementar SAP Business One? Primero, definamos el alcance](/blog/cuanto-cuesta-implementar-sap-business-one-peru/)
 - [On-Premise vs Nube vs Alquiler: cómo elegir la modalidad de SAP Business One](/blog/on-premise-vs-nube-vs-alquiler-sap-b1/)
+`,v=`---
+title: "¿Odoo o SAP Business One? La comparación honesta que nadie le hace"
+metaTitle: "Odoo vs SAP B1: la comparación honesta"
+date: 2026-09-04
+image: /images/blog/odoo-vs-sap-business-one.jpg
+excerpt: "Odoo es moderno, rápido y barato de entrada; SAP Business One apuesta por el costo total y el cumplimiento SUNAT. La comparación honesta antes de elegir ERP en Perú."
+tags: [odoo, erp, comparativa, sunat]
+---
+
+«¿Odoo o SAP Business One?» es la pregunta que más escuchamos de gerentes y CFOs que están evaluando ERP por primera vez — o que ya recibieron una cotización de cada lado y no saben cómo compararlas.
+
+Empecemos por lo que casi nadie dice: **Odoo es un buen producto.** Interfaz moderna, inicio rápido y un precio de entrada bajo. Si su operación es simple, puede ser suficiente. El problema no es Odoo; es decidir con la información equivocada. Esta guía compara lo que realmente separa a ambos sistemas en una empresa peruana.
+
+## ¿Por qué Odoo se ve tan atractivo?
+
+Porque la conversación de venta empieza y termina en el mes 1:
+
+- **Interfaz moderna** y fácil de recorrer, pensada para que el usuario no necesite capacitación larga.
+- **Arranque ágil**: en operaciones pequeñas, un socio de Odoo puede dejar módulos funcionando en semanas.
+- **Precio de entrada bajo**: ediciones de código abierto y suscripciones por usuario que se ven imbatibles contra una licencia profesional de SAP Business One.
+
+Nada de eso es mentira. Lo que no aparece en esa conversación son las tres preguntas que siguen.
+
+## ¿Quién responde por mi cumplimiento SUNAT completo?
+
+Su empresa ya tiene obligaciones vigentes: facturación electrónica, detracciones (SPOT), libros electrónicos (SIRE), kardex valorado e inventarios, guías de remisión. La pregunta operativa no es si el ERP «tiene un módulo», sino **quién lo mantiene al día cuando SUNAT actualiza los formatos o los cronogramas**.
+
+- En Odoo, la localización peruana se arma, en la práctica, con módulos de terceros y de la comunidad. Pregunte al implementador quién actualiza esos módulos en cada salto de versión, quién los valida contra las obligaciones vigentes y qué le cuesta esa revalidación.
+- En SAP Business One, la localización peruana tiene años de uso productivo en el país y los add-ons de facturación, detracciones y SIRE los proveen los partners certificados, con un solo responsable: su partner.
+
+Cuando un comprobante rechazado detiene sus despachos, usted no necesita un foro de ayuda: necesita un teléfono que conteste.
+
+## ¿Mi contador puede auditar cada asiento con contrapartida trazable?
+
+Aquí conviene ser justos: Odoo también contabiliza. La pregunta no es si puede, sino **qué pasa en el cierre mensual**, cuando su contador tiene que explicar una diferencia ante la gerencia o ante una fiscalización.
+
+SAP Business One nació como ERP financiero: cada documento (factura, pago, asiento de inventario) genera su asiento con contrapartida, y desde el mayor se puede rastrear hasta la transacción original, con dimensiones de análisis y control de períodos contables cerrados. Esa trazabilidad no es un add-on: es el diseño del sistema.
+
+Y cuando algo no cuadra, ¿quién se sienta con su contador? Un partner local que conoce el negocio y la norma peruana, no un integrador que instaló un módulo de terceros y siguió de largo.
+
+## ¿Cuánto cuesta el año 3, no el mes 1?
+
+Compare ERPs como se compara una planta, no como se compara un SaaS cualquiera. A 36 meses, la lista de costos reales incluye:
+
+- **Licencias y modalidad**: compra + mantenimiento anual o suscripción; en Odoo, suscripción por usuario y por módulos, más la edición Enterprise si su operación la requiere.
+- **Localización local**: módulos SUNAT, plan contable peruano, moneda y realidad de la PyME. Es donde Odoo suma proveedores externos y SAP B1 ya trae el ecosistema de su partner.
+- **Soporte y capacitación**: horas de su equipo, tiempo de su contador, respuesta en soles y en horario peruano cuando la obligación vence.
+- **Cambios de versión**: cada actualización de Odoo obliga a revalidar módulos de terceros. Presupueste ese trabajo recurrente.
+
+Haga esa cuenta a 36 meses — con el costo de implementación, no solo el precio de lista — y la brecha del mes 1 se achica hasta desaparecer. SAP B1 no compite en precio de entrada: compite en **costo total** y en riesgo cero con SUNAT.
+
+## ¿Cuándo Odoo sí es suficiente?
+
+Con honestidad de consultor: si su operación es simple — pocos usuarios, contabilidad de una sola empresa, inventario básico sin kardex valorado complejo, sin manufactura — y su equipo tiene capacidad interna para operarlo y mantenerlo, Odoo puede ser la respuesta correcta. No todo negocio necesita un ERP de nivel SAP Business One, y decirlo no nos quita clientes: nos quita malos proyectos.
+
+## ¿Puedo empezar con Odoo y migrar después a SAP Business One?
+
+Se puede, y mucha gente lo hace — pero esa es justamente la cuenta que debe hacer hoy. Migrar implica reimplementar procesos, migrar datos, volver a capacitar y operar en paralelo durante la transición. Si su proyección de crecimiento dice que en 24 meses necesitará inventarios valorados, manufactura o integración SUNAT robusta, ese costo de cambio ya es parte del costo total de Odoo. Decida con esa cuenta en la mano, no con el precio del mes 1.
+
+> En Cygnus operamos SAP Business One para PyMEs peruanas. Si está evaluando ERPs, le enviamos la comparativa costo a costo aplicada a su operación — sin compromiso, en menos de 24 horas hábiles. Escríbanos por WhatsApp.
+
+## Sigue leyendo
+
+- [¿Cuánto cuesta una licencia de SAP Business One en Perú? El desglose que nadie explica](/blog/cuanto-cuesta-licencia-sap-business-one-peru/)
+- [¿Cuánto cuesta implementar SAP Business One? Primero, definamos el alcance](/blog/cuanto-cuesta-implementar-sap-business-one-peru/)
 `,f=`---
 title: "On-Premise vs Nube vs Alquiler: cómo elegir la modalidad de SAP Business One"
 metaTitle: "On-Premise vs Nube vs Alquiler en SAP B1"
@@ -245,7 +310,7 @@ SAP Business One es una sola solución, pero se opera de **tres maneras** distin
 
 - [Facturación electrónica SUNAT con SAP Business One](/blog/facturacion-electronica-sunat-sap-b1/)
 - [¿Cuánto cuesta implementar SAP Business One? Primero, definamos el alcance](/blog/cuanto-cuesta-implementar-sap-business-one-peru/)
-`,v=`---
+`,q=`---
 title: "15 preguntas que debe hacerle a un partner de SAP Business One antes de firmar"
 metaTitle: "15 preguntas a un partner de SAP B1"
 date: 2026-08-28
@@ -292,7 +357,7 @@ Compare partners con la misma checklist y la misma información. Pida las propue
 
 - [¿Cuánto cuesta implementar SAP Business One? Primero, definamos el alcance](/blog/cuanto-cuesta-implementar-sap-business-one-peru/)
 - [On-Premise vs Nube vs Alquiler: cómo elegir la modalidad de SAP Business One](/blog/on-premise-vs-nube-vs-alquiler-sap-b1/)
-`,q=`---
+`,P=`---
 title: "¿Qué son las letras por pagar y por cobrar? Guía con SAP Business One"
 metaTitle: "¿Qué son las letras por pagar y por cobrar?"
 date: 2026-08-26
@@ -342,4 +407,4 @@ El **módulo de Letras por Cobrar de Cygnus** es un add-on 100% integrado a SAP 
 
 - [Facturación electrónica SUNAT con SAP Business One](/blog/facturacion-electronica-sunat-sap-b1/)
 - [¿Cuánto cuesta implementar SAP Business One? Primero, definamos el alcance](/blog/cuanto-cuesta-implementar-sap-business-one-peru/)
-`,P=Object.assign({"../../content/blog/cuanto-cuesta-implementar-sap-business-one-peru.md":m,"../../content/blog/cuanto-cuesta-licencia-sap-business-one-peru.md":g,"../../content/blog/detracciones-sunat-guia-practica.md":b,"../../content/blog/facturacion-electronica-sunat-sap-b1.md":y,"../../content/blog/on-premise-vs-nube-vs-alquiler-sap-b1.md":f,"../../content/blog/preguntas-para-elegir-partner-sap-business-one.md":v,"../../content/blog/que-son-letras-por-pagar-y-letras-por-cobrar.md":q}),S=Object.entries(P).map(([e,n])=>{var a;const o=((a=e.split("/").pop())==null?void 0:a.replace(/\.md$/,""))??"post";return p(o,n)}).filter(e=>!e.draft).sort((e,n)=>e.date<n.date?1:-1),O=e=>S.find(n=>n.slug===e);export{S as b,z as f,O as g,h as r};
+`,S=Object.assign({"../../content/blog/cuanto-cuesta-implementar-sap-business-one-peru.md":m,"../../content/blog/cuanto-cuesta-licencia-sap-business-one-peru.md":g,"../../content/blog/detracciones-sunat-guia-practica.md":b,"../../content/blog/facturacion-electronica-sunat-sap-b1.md":y,"../../content/blog/odoo-vs-sap-business-one.md":v,"../../content/blog/on-premise-vs-nube-vs-alquiler-sap-b1.md":f,"../../content/blog/preguntas-para-elegir-partner-sap-business-one.md":q,"../../content/blog/que-son-letras-por-pagar-y-letras-por-cobrar.md":P}),A=Object.entries(S).map(([e,n])=>{var a;const o=((a=e.split("/").pop())==null?void 0:a.replace(/\.md$/,""))??"post";return p(o,n)}).filter(e=>!e.draft).sort((e,n)=>e.date<n.date?1:-1),C=e=>A.find(n=>n.slug===e);export{A as b,O as f,C as g,h as r};
